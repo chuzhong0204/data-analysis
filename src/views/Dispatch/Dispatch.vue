@@ -7,18 +7,24 @@
             <p>战损情况</p>
           </Narbar>
           <Mould>
-            <div>
+            <div><Head></Head>
               <LittleTittle>空战战损</LittleTittle>
-              <span>击伤数量</span><ProgressBar></ProgressBar>
-              <span>击落数量</span><ProgressBar></ProgressBar>
+              <span>击伤数量</span>
+              <ProgressBar></ProgressBar>
+              <span>击落数量</span>
+              <ProgressBar></ProgressBar>
               <LittleTittle>地防战损</LittleTittle>
-              <span>击伤数量</span><ProgressBar></ProgressBar>
-              <span>击落数量</span><ProgressBar></ProgressBar>
+              <span>击伤数量</span>
+              <ProgressBar></ProgressBar>
+              <span>击落数量</span>
+              <ProgressBar></ProgressBar>
             </div>
             <div>
               <LittleTittle>空战击落敌机</LittleTittle>
-              <span>击伤数量</span><ProgressBar></ProgressBar>
-              <span>击落数量</span><ProgressBar></ProgressBar>
+              <span>击伤数量</span>
+              <ProgressBar></ProgressBar>
+              <span>击落数量</span>
+              <ProgressBar></ProgressBar>
             </div>
           </Mould>
         </div>
@@ -28,7 +34,7 @@
           <Narbar>
             <p>航空兵出动情况（总体）</p>
           </Narbar>
-          <Mould  class="special">
+          <Mould class="special">
             <TableTotal></TableTotal>
           </Mould>
         </div>
@@ -54,6 +60,7 @@ import Ground from "./Ground";
 import LittleTittle from "../../components/LittleTittle";
 import ProgressBar from "../../components/ProgressBar";
 import TableTotal from "./TableTotal";
+import Head from "./Head";
 
 export default {
   name: "Dispatch",
@@ -63,7 +70,8 @@ export default {
     Ground,
     LittleTittle,
     ProgressBar,
-    TableTotal
+    TableTotal,
+    Head
   }
 };
 </script>
@@ -88,11 +96,11 @@ export default {
   background: #001529;
   height: 100%;
 }
-div span{
+div span {
   position: relative;
   text-align: left;
 }
-.special{
-  height: 540px!important;
+.special {
+  height: 540px !important;
 }
 </style>

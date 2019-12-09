@@ -42,7 +42,7 @@ export default {
     Narbar,
     Mould,
     LittleTittle,
-    Table
+    Table,
   },
   data() {
     return {
