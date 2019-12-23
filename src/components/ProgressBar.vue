@@ -1,6 +1,15 @@
 <template>
-  <div class="progressContainer">
-    <div class="progressItem" :style="{width:barwidth+'%'}"></div>
+  <div class="progress">
+    <slot name="word"></slot>
+    <div
+      class="progressContainer"
+      :style="{backgroundColor:pstyle.bgc,borderTopRightRadius:pstyle.bdtradius,borderBottomRightRadius:pstyle.bdbradius}"
+    >
+      <div class="progressItem" :style="{backgroundColor:pstyle.fgc}"></div>
+      <slot name="dat"></slot>
+      <!--:style="{width:barwidth+'%'}"-->
+    </div>
+    <slot name="number"></slot>
   </div>
 </template>
 
@@ -10,26 +19,39 @@ export default {
   data() {
     return {};
   },
-  props: ["total", "rest", "barwidth"]
+  props: {
+    /*     bgc: {
+      type: String
+    }, */
+    /*        props: ["total", "rest", "barwidth"]
+     */
+    pstyle: {
+      type: Object
+    }
+  }
 };
 </script>
 
 <style scoped>
+.progress {
+  width: 100%;
+  height: 30px;
+}
 .progressContainer {
+  float: right;
   position: relative;
-  height: 10px;
-  width: 80%;
-  background-color: #aaa;
-  border-radius: 5px;
+  left: -15%;
+  top: -57px;
+  height: 18px;
+  width: 60%;
   right: -50px;
+  overflow: hidden;
 }
 .progressItem {
   position: absolute;
-  height: 10px;
-  width: 80%;
-  background-color: orange;
-  border-radius: 5px;
-/*   background-image: linear-gradient(
+  height: 18px;
+  width: 70%;
+  /*   background-image: linear-gradient(
     100deg,
     rgba(255, 255, 255, 0.15) 25%,
     transparent 25%,
@@ -39,6 +61,17 @@ export default {
     transparent 75%,
     transparent
   ); */
-  background-color: orange;
+}
+/* p {
+  position: relative;
+  text-align: left;
+} */
+.number {
+  text-align: right;
+  position: relative;
+  left: 55%;
+  top: -55px;
+}
+.dat {
 }
 </style>

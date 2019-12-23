@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <Nav></Nav>
+<!--     <XXX></XXX>
+        <VVV></VVV> -->
   </div>
 </template>
 
 <script>
 import Nav from "./views/Nav/Nav";
+/* import XXX from "./views/modules/fxfa"
+import VVV from "./views/modules/fxfa-add-or-update" */
 export default {
   components: {
-    Nav
+    Nav,
+/*     XXX,
+    VVV */
   }
 };
 </script>
@@ -24,7 +30,7 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+/*   text-align: center; */
   color: #ffffff;
 }
 </style>

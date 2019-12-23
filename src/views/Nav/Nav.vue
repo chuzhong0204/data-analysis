@@ -1,16 +1,31 @@
 <template>
   <div>
     <div id="nav">
-      <router-link to="/track">航迹表</router-link>
-      <router-link to="/detail">威胁力+毁伤+战力</router-link>
-      <router-link to="/dispatch">航空兵出动情况</router-link>
+      <div @click.prevent="pushTrack">航迹表</div>
+<!--       <router-link to="/track">航迹表</router-link> -->
+      <div @click.prevent="pushDetail">威胁力+毁伤+战力</div>
+      <div @click.prevent="pushDispatch">航空兵出动情况</div>
+
+<!--       <router-link to="/detail">威胁力+毁伤+战力</router-link>
+      <router-link to="/dispatch">航空兵出动情况</router-link> -->
     </div>
     <router-view />
   </div>
 </template>
 <script>
 export default {
-  name:'Nav'
+  name:'Nav',
+  methods:{
+    pushTrack(){
+      this.$router.replace("/track")
+    },
+    pushDetail(){
+      this.$router.replace("/detail")
+    },
+    pushDispatch(){
+      this.$router.replace("/dispatch")
+    }
+  }
 };
 </script>
 <style scoped>
@@ -21,17 +36,18 @@ export default {
   top: 12px;
 }
 
-#nav a {
+#nav div{
   position: relative;
+  display: inline;
   font-weight: bold;
   color: #00cc66;
-  text-decoration: none;
   margin: 0px 1%;
   top: 20px;
-  left: 1.5%;
+  left: 41%;
 }
 
-#nav a.router-link-active {
+#nav div:hover{
   color: rgb(0, 255, 98);
+  cursor: pointer;
 }
 </style>

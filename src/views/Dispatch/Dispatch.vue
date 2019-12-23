@@ -4,27 +4,45 @@
       <el-col :span="6">
         <div class="grid-content">
           <Narbar>
-            <p>战损情况</p>
+            <p>我方战损</p>
           </Narbar>
           <Mould>
-            <div><Head></Head>
-              <LittleTittle>空战战损</LittleTittle>
-              <span>击伤数量</span>
-              <ProgressBar></ProgressBar>
-              <span>击落数量</span>
-              <ProgressBar></ProgressBar>
-              <LittleTittle>地防战损</LittleTittle>
-              <span>击伤数量</span>
-              <ProgressBar></ProgressBar>
-              <span>击落数量</span>
-              <ProgressBar></ProgressBar>
+            <div>
+              <Head>
+                <p>战损情况</p>
+              </Head>
+              <LittleTittle class="lit-tit">空战战损</LittleTittle>
+              <ProgressBar :pstyle="pstyle1">
+                <p slot="word" class="word">击伤数量</p>
+                <p slot="number" class="number">62%</p>
+              </ProgressBar>
+              <ProgressBar :pstyle="pstyle2">
+                <p slot="word" class="word">击落数量</p>
+                <p slot="number" class="number">20%</p>
+              </ProgressBar>
+              <LittleTittle class="lit-tit">地防战损</LittleTittle>
+              <ProgressBar :pstyle="pstyle1">
+                <p slot="word" class="word">击伤数量</p>
+                <p slot="number" class="number">62%</p>
+              </ProgressBar>
+              <ProgressBar :pstyle="pstyle2">
+                <p slot="word" class="word">击落数量</p>
+                <p slot="number" class="number">20%</p>
+              </ProgressBar>
             </div>
             <div>
-              <LittleTittle>空战击落敌机</LittleTittle>
-              <span>击伤数量</span>
-              <ProgressBar></ProgressBar>
-              <span>击落数量</span>
-              <ProgressBar></ProgressBar>
+              <Head>
+                <p>敌方战损</p>
+              </Head>
+              <LittleTittle class="lit-tit">空战击落敌机</LittleTittle>
+              <ProgressBar :pstyle="pstyle1">
+                <p slot="word" class="word">击伤数量</p>
+                <p slot="number" class="number">62%</p>
+              </ProgressBar>
+              <ProgressBar :pstyle="pstyle2">
+                <p slot="word" class="word">击落数量</p>
+                <p slot="number" class="number">20%</p>
+              </ProgressBar>
             </div>
           </Mould>
         </div>
@@ -72,6 +90,20 @@ export default {
     ProgressBar,
     TableTotal,
     Head
+  },
+  data() {
+    return {
+      pstyle1: {
+        bgc: "#001529",
+        bdtradius: "0%",
+        fgc: "#009966"
+      },
+      pstyle2: {
+        bgc: "#001529",
+        bdtradius: "0%",
+        fgc: "#FF3333"
+      }
+    };
   }
 };
 </script>
@@ -102,5 +134,18 @@ div span {
 }
 .special {
   height: 540px !important;
+}
+.lit-tit {
+  text-align: left;
+  position: relative;
+  left: 6%;
+  top: 40px;
+}
+.word {
+  margin: 60px 0px;
+  text-align: left;
+  position: relative;
+  left: 7%;
+  top: 20px;
 }
 </style>

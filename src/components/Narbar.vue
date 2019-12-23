@@ -18,6 +18,7 @@ export default {
   border-bottom: 1px solid #e9e9e9;
 }
 .narbar p {
+  text-align: center;
   margin: 0px;
   line-height: 51px;
   font-size: 20px;

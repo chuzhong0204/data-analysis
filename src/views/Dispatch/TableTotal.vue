@@ -66,7 +66,7 @@ table {
   width: 96%;
   height: 100%;
   border-spacing: 6px;
-    position: relative;
+  position: relative;
   left: 2%;
   padding: 2% 0px;
 }
@@ -74,8 +74,8 @@ tr {
   width: 100%;
 }
 td {
-  width: 8%;
   background-color: #233273;
-  border: 2px solid #F2F2F2;
+  border: 2px solid #f2f2f2;
+  width: 16%;
 }
 </style>
